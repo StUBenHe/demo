@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>EMW01 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Einführung Maxwellschen Gleichungen中出现的物理量的意义和特性：Maxwellschen Gleichungen中的物理量包括电场 ( \mathbf{E} )，磁场 ( \mathbf{B} )，电荷密度 ( \rho )，和电流密度 ( \mathbf{J} ) 等，它们描述了电磁场的行为和相互作用。这些物理量的性质包括它们的强度、方向、分布以及与电磁场的相互">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EMW01">
+<meta property="og:url" content="http://example.com/2023/11/05/EMW00/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Einführung Maxwellschen Gleichungen中出现的物理量的意义和特性：Maxwellschen Gleichungen中的物理量包括电场 ( \mathbf{E} )，磁场 ( \mathbf{B} )，电荷密度 ( \rho )，和电流密度 ( \mathbf{J} ) 等，它们描述了电磁场的行为和相互作用。这些物理量的性质包括它们的强度、方向、分布以及与电磁场的相互">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2023-11-05T19:01:41.000Z">
+<meta property="article:modified_time" content="2024-03-04T04:26:50.015Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="数学物理基础">
+<meta property="article:tag" content="麦克斯韦方程组">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="/img/logo1-yellow.png"><link rel="canonical" href="http://example.com/2023/11/05/EMW00/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'EMW01',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-04 05:26:50'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><img class="site-icon" src="/img/logo2.png"/><span class="site-name">Hexo</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">EMW01</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-11-05T19:01:41.000Z" title="Created 2023-11-05 20:01:41">2023-11-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-03-04T04:26:50.015Z" title="Updated 2024-03-04 05:26:50">2024-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Elektrotechnik/">Elektrotechnik</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Elektrotechnik/Elektromagnetische-Wellen/">Elektromagnetische Wellen</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Einfuhrung"><a href="#Einfuhrung" class="headerlink" title="Einführung"></a>Einführung</h2><ol>
+<li><p><strong>Maxwellschen Gleichungen中出现的物理量的意义和特性</strong>：Maxwellschen Gleichungen中的物理量包括电场 ( \mathbf{E} )，磁场 ( \mathbf{B} )，电荷密度 ( \rho )，和电流密度 ( \mathbf{J} ) 等，它们描述了电磁场的行为和相互作用。这些物理量的性质包括它们的强度、方向、分布以及与电磁场的相互关系。</p>
+</li>
+<li><p><strong>各个Maxwellschen Gleichungen的含义</strong>：Maxwellschen Gleichungen包括高斯定律、高斯磁场定律、法拉第电磁感应定律和安培定律。这些方程描述了电场和磁场的产生、传播和相互作用。高斯定律和高斯磁场定律描述了电场和磁场的源，法拉第电磁感应定律描述了磁场随时间的变化如何产生电场，而安培定律描述了电流如何产生磁场。</p>
+</li>
+<li><p><strong>从积分形式到微分形式的Maxwellschen Gleichungen的转化</strong>：将Maxwellschen Gleichungen从积分形式转换为微分形式可以通过应用高斯定理和斯托克斯定理来完成。这种转换使得方程更适合于描述空间中的局部变化和微观效应。</p>
+</li>
+<li><p><strong>Maxwellschen Gleichungen的简化假设：准静态和真空</strong>：Maxwellschen Gleichungen在某些情况下可以简化为准静态或真空情况下的形式。准静态假设假设电场和磁场的变化非常缓慢，从而使得一些项可以忽略。真空假设假设电场和磁场在没有介质的情况下传播，从而使得一些项可以简化为零。</p>
+</li>
+<li><p><strong>通过Maxwell对Ampère定律的补充解释电磁波在自由空间中的传播</strong>：通过Maxwell对Ampère定律的补充，可以解释在真空中存在电场的变化率是如何导致磁场的变化，从而产生电磁波的传播。这个补充描述了电场和磁场之间的相互作用，解释了电磁波在自由空间中的传播。</p>
+</li>
+<li><p><strong>高斯定律</strong>：<br>[<br>\nabla \cdot \mathbf{E} &#x3D; \frac{\rho}{\varepsilon_0}<br>]</p>
+</li>
+<li><p><strong>高斯磁场定律</strong>：<br>[<br>\nabla \cdot \mathbf{B} &#x3D; 0<br>]</p>
+</li>
+<li><p><strong>法拉第电磁感应定律</strong>：<br>[<br>\nabla \times \mathbf{E} &#x3D; -\frac{\partial \mathbf{B}}{\partial t}<br>]</p>
+</li>
+<li><p><strong>安培定律</strong>：<br>[<br>\nabla \times \mathbf{B} &#x3D; \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}<br>]</p>
+</li>
+</ol>
+<h2 id="Wellengleichung"><a href="#Wellengleichung" class="headerlink" title="Wellengleichung"></a>Wellengleichung</h2><p><strong>从麦克斯韦方程组中推导出电场和磁场的矢量波动方程</strong><br>：电场和磁场的矢量波动方程可以通过对麦克斯韦方程组进行适当组合和操作而得到。</p>
+<p><strong>为什么从麦克斯韦方程组推导出波动方程</strong>：波动方程描述了电磁场的传播和行为，从麦克斯韦方程组推导出波动方程可以更好地理解电磁波在空间中的行为。</p>
+<p><strong>为什么 d’Alembert 的解法预测每个波都可以表示为来回波的叠加</strong>：d’Alembert 的解法预测了这种情况，因为它将波动方程转化为对两个变量的偏微分方程，其中一个表示前进波，另一个表示后退波。</p>
+<p><strong>如何将周期函数表示为不同频率的余弦和正弦振动以及一个平均值的叠加</strong>：周期函数可以通过傅里叶级数展开，表示为不同频率的余弦和正弦振动的线性组合，加上一个平均值。</p>
+<p><strong>通过复数矢量表示法描述场强的数学优势</strong>：复数矢量表示法将场强表示为复数，简化了计算和分析电磁场的行为，尤其是在频率稳定的情况下。</p>
+<p><strong>为什么麦克斯韦方程组可以不带显式时间依赖，并且只用复振幅来表述</strong>：麦克斯韦方程组描述了电磁场的行为，其中电磁波是频率稳定的，因此可以将其表示为只含有复振幅的形式，而不需要显式地引入时间依赖。</p>
+<h2 id="Zeitharmonische-ebene-Wellen"><a href="#Zeitharmonische-ebene-Wellen" class="headerlink" title="Zeitharmonische ebene Wellen"></a>Zeitharmonische ebene Wellen</h2><p><strong>Maxwell方程组</strong>：这是描述电磁场的基本方程。它们可以用复振幅形式表示，因为电磁波是频率稳定的，没有显式的时间依赖关系。</p>
+<p><strong>一般波动方程与Helmholtz方程的关系</strong>：Helmholtz方程是一般波动方程的特例，当电磁场中没有源时，它可以简化为Helmholtz方程。使用复数表示法，这些方程可以更简洁地表达。</p>
+<p><strong>时谐平面波的描述</strong>：时谐平面波可以用复数表示法描述，其中包括波矢，振幅和相位信息。</p>
+<p><strong>Poynting矢量描述的辐射能量</strong>：Poynting矢量表示电磁场中能量的流动方向和速率。通过它，可以描述电磁场的辐射能量。</p>
+<p><strong>实部和虚部的Poynting矢量之间的关系</strong>：实部和虚部的Poynting矢量是复Poynting矢量的构成部分，它们在描述能量流动和存储方面起着重要作用。</p>
+<p><strong>功率传输和无功功率传输</strong>：Poynting矢量可以描述功率的传输，包括有功功率（真实功率）和无功功率（虚功率）。</p>
+<p><strong>波的极化</strong>：波的极化描述了电磁波振动方向的特性。不同的极化状态可以通过合适的数学描述来区分和解释。</p>
+<h2 id="Elektromagnetsche-Wellen-in-dispersiven-Medien"><a href="#Elektromagnetsche-Wellen-in-dispersiven-Medien" class="headerlink" title="Elektromagnetsche Wellen in dispersiven Medien"></a>Elektromagnetsche Wellen in dispersiven Medien</h2><p><strong>时间相关的极化率</strong>：引入它是为了描述其介电特性随时间变化的材料。这种极化率描述了材料对电场的响应，其中响应可能具有延迟或预先条件。</p>
+<p><strong>复波数</strong>：它将平面波的实部（描述传播）和虚部（描述衰减或损耗）结合起来。实部决定传播速度，而虚部表示场的衰减。</p>
+<p><strong>相速度和群速度</strong>：相速度描述波的相位移动速度，而群速度描述波的振幅移动速度。它们可能有所不同，尤其是在色散介质中。</p>
+<p><strong>相位常数的泰勒展开的高阶项</strong>：泰勒展开中的高阶项可以描述影响波传播的非线性效应，如色散、非线性折射或调制。</p>
+<p><strong>洛伦兹-德鲁德共振器模型</strong>：它允许对材料的复电容率做出陈述，这些复电容率是由共振频率和阻尼过程的总和组成的。</p>
+<p><strong>介质</strong>：介质是一种在电场中被极化的绝缘材料。它的相对电容率描述了它增强电场的程度。</p>
+<p><strong>（理想）导体</strong>：（理想）导体是一种良好导电的材料。它的电导率很高，其相对电容率通常接近零。</p>
+<p><strong>电磁波传播的差异</strong>：介质支持电磁波的传播，而导体由于其高电导率而强烈吸收电磁波。传播速度、衰减和色散可能会有很大的变化。</p>
+<h2 id="Hertzscher-Dipol"><a href="#Hertzscher-Dipol" class="headerlink" title="Hertzscher Dipol"></a>Hertzscher Dipol</h2><p><strong>赫兹偶极子的物理模型</strong>：赫兹偶极子基于振荡电偶极子的模型。当导线中的电流周期性地反转时，会产生变化的电场，从而产生电磁波。因此，赫兹偶极子对于理解电磁波的生成至关重要。</p>
+<p><strong>使用磁矢势解耦麦克斯韦方程</strong>：通过使用磁矢势，可以将麦克斯韦方程解耦，从而简化问题的求解。这种势能够将电场和磁场的方程分开考虑，使得复杂的问题可以分解为更简单的部分问题。</p>
+<p><strong>球坐标中的球面波的重要性</strong>：球面波是球坐标中波动方程的解。它们在描述球对称系统中的电磁场时具有重要作用，而这种情况在自然界中经常出现。</p>
+<p><strong>球坐标下 Helmholz 方程解的作用</strong>：通过 Helmholz 方程在球坐标下的解，可以表示一般偶极子的矢势。这些解描述了偶极子周围场的空间分布。</p>
+<p><strong>赫兹偶极子的近场和远场中主要发生的盲功率和有功功率传输</strong>：在赫兹偶极子的近场中，主要是盲功率传输占主导地位，因为此处磁场占主导地位且不传输能量。在远场中，有功功率传输占主导地位，因为电磁场在这里传播并传输能量。</p>
+<h2 id="Reflexion-und-Brechung"><a href="#Reflexion-und-Brechung" class="headerlink" title="Reflexion und Brechung"></a>Reflexion und Brechung</h2><ol>
+<li><p><strong>边界处的切向和法向场分量（不）连续性以及推导的基本关系</strong>：电场和磁场的切向分量在边界处是连续的，而法向分量则不是。这可以通过麦克斯韦方程组以及边界条件来推导。</p>
+</li>
+<li><p><strong>将电磁（平面）波分解为入射、反射和透射部分的能力</strong>：在界面上，电磁（平面）波可以分解为入射、反射和透射三部分，其振幅和相位由反射和透射系数决定。</p>
+</li>
+<li><p><strong>导出反射和折射定律时的假设</strong>：导出反射和折射定律时通常假设界面是平坦的，介质是线性和各向同性的。</p>
+</li>
+<li><p><strong>区分垂直和平行极化的标准</strong>：极化是基于电场矢量相对于界面的方向来区分的。垂直极化意味着电场与入射平面垂直，而平行极化意味着电场与入射平面平行。</p>
+</li>
+<li><p><strong>极化对反射和透射系数的影响</strong>：极化会影响反射和透射系数，因为反射和透射波的振幅取决于极化方向。</p>
+</li>
+<li><p><strong>全反射条件</strong>：当第二介质的折射率小于第一介质的折射率，并且入射角大于临界角时，就会发生全反射。</p>
+</li>
+<li><p><strong>布鲁斯特角的意义</strong>：布鲁斯特角是入射角，使得反射波是垂直极化的，而透射波没有垂直极化成分。这个角度在减少光学表面反射中起着重要作用。</p>
+</li>
+</ol>
+<h2 id="Beugung-und-Interferenz"><a href="#Beugung-und-Interferenz" class="headerlink" title="Beugung und Interferenz"></a>Beugung und Interferenz</h2><ol>
+<li><p><strong>惠更斯原理的表述</strong>：你理解了根据惠更斯原理，每个波函数都可以表示为球面波的叠加，这是波动光学中的重要概念。</p>
+</li>
+<li><p><strong>对位置矢量 r 和 r’ 的积分需求</strong>：你明白了为什么除了表示观察点的位置矢量 r 外，还需要对位置矢量 r’ 进行积分。这样做可以全面考虑波的衍射和干涉。</p>
+</li>
+<li><p><strong>在导出基尔霍夫衍射积分时所做的假设</strong>：你了解了在导出基尔霍夫衍射积分时所做的假设，以描述波在孔径上的衍射过程。</p>
+</li>
+<li><p><strong>弗涅尔和夫琅禾费近似以及其适用范围</strong>：你理解了如何应用弗涅尔和夫琅禾费近似来计算衍射模式，并且知道它们各自的适用范围。</p>
+</li>
+<li><p><strong>夫琅禾费近似和傅立叶变换之间的关系</strong>：你认识到，根据夫琅禾费近似，对于平面波而言，衍射积分相当于孔径函数的二维傅立叶变换，这是波动光学与信号处理之间的重要关系。</p>
+</li>
+</ol>
+<h2 id="Gausscher-strahl"><a href="#Gausscher-strahl" class="headerlink" title="Gaußscher strahl"></a>Gaußscher strahl</h2><ol>
+<li><p><strong>为什么我们考虑高斯光束而不是平面波或球面波</strong>：我们之所以考虑高斯光束，是因为它在光学系统中有广泛的应用，可以更好地描述实际光学系统中的光束行为。</p>
+</li>
+<li><p><strong>偏光近似的假设和其与 Fresnel 近似的关系</strong>：偏光近似假设是对亥姆霍兹方程的一种近似处理，与 Fresnel 近似关联紧密。它假设光束在光轴附近的传播，从而简化了亥姆霍兹方程的求解。</p>
+</li>
+<li><p><strong>高斯光束在焦点处的最小半径以及随着距离增加而增加</strong>：高斯光束在焦点处的半径最小，并且随着从焦点的距离增加而增大，这是高斯光束的特征之一。</p>
+</li>
+<li><p><strong>高斯光束横向场分布的数学描述如何考虑到光束半径和相位曲率的变化</strong>：横向场分布的数学描述考虑到了光束的半径和相位曲率的变化，这是通过高斯光束的束腰位置和曲率来实现的。</p>
+</li>
+<li><p><strong>高斯光束仅在焦点处具有平面相位前沿</strong>：高斯光束的一个重要特征是它在焦点处具有平面相位前沿，这使得焦点处的光束特别适合许多光学应用。</p>
+</li>
+<li><p><strong>Gouy 相位偏移的作用</strong>：Gouy 相位偏移是指光束焦点周围相位的变化，它在光束传播过程中起着重要作用，尤其是在光学成像和激光加工等应用中。</p>
+</li>
+</ol>
+<h2 id="Optische-Systeme"><a href="#Optische-Systeme" class="headerlink" title="Optische Systeme"></a>Optische Systeme</h2><ol>
+<li><p><strong>透镜的用途和不同类型</strong>：我们使用透镜来聚焦、放大或调整光束的传播方向。不同类型的透镜包括凸透镜、凹透镜、棱镜等。</p>
+</li>
+<li><p><strong>球面和抛物面的差异</strong>：球面透镜的曲率半径在所有方向上相同，而抛物面透镜的曲率半径沿一个方向是不同的。抛物面透镜通常用于消除球面像差。</p>
+</li>
+<li><p><strong>薄透镜的特点及为何使用这种简化</strong>：薄透镜假设透镜的厚度非常小，因此可以将透镜的折射效应简化为平面表面的折射。这种简化使得透镜系统的分析更加方便。</p>
+</li>
+<li><p><strong>为何汇聚和发散透镜会聚或分散入射波以及焦距在其中扮演的角色</strong>：汇聚透镜将入射波聚焦到焦点处，而发散透镜将入射波分散。焦距决定了透镜的聚焦能力。</p>
+</li>
+<li><p><strong>有限横向展宽的汇聚透镜如何影响焦点处的斑点大小</strong>：有限横向展宽会导致焦点处的光斑变大，这是因为不同位置的光线将汇聚到焦点附近的不同位置。</p>
+</li>
+<li><p><strong>在什么条件下我们也可以使用镜子来收集和散射电磁波</strong>：镜子也可以用来汇聚和发散电磁波，条件是镜面必须光滑且反射率高，使得光线在反射过程中保持其聚焦或分散的特性。</p>
+</li>
+</ol>
+<h2 id="ParallelplattenLeitung"><a href="#ParallelplattenLeitung" class="headerlink" title="ParallelplattenLeitung"></a>ParallelplattenLeitung</h2><ol>
+<li><p><strong>电磁波在界面上的行为，特别是在理想导体上的行为</strong>：电磁波在界面上的反射和折射现象是基于麦克斯韦方程组和边界条件的，理想导体表现出完全反射的特性。</p>
+</li>
+<li><p><strong>入射波与在导体上反射的波的叠加形成了一种 - 垂直于界面的 - 驻波</strong>：来自入射波和反射波的叠加形成了沿界面垂直传播的驻波，这是电磁波在理想导体上的典型行为。</p>
+</li>
+<li><p><strong>通过叠加形成的波的相速度和群速度如何随入射角而变化</strong>：通过叠加形成的波的相速度和群速度取决于入射角和介质特性，它们描述了波的传播速度和波包的传播速度。</p>
+</li>
+<li><p><strong>平行板波导的工作原理如何从对理想导体上波的入射的考虑中推导出来</strong>：平行板波导的工作原理可以通过考虑电磁波在理想导体上的反射和折射来推导。</p>
+</li>
+<li><p><strong>模式的定义以及在平行板波导中各个模式可以传播的条件</strong>：模式是波导中的特定电磁场分布形式，平行板波导中的各个模式受到波导尺寸和工作频率的限制。</p>
+</li>
+<li><p><strong>对于平行板波导，各个模式的边缘频率的重要性</strong>：边缘频率是指波导中特定模式的传播频率的临界值，超过该频率将无法在波导中传播该模式。</p>
+</li>
+<li><p><strong>相速度和群速度在平行板波导中的行为</strong>：相速度和群速度取决于波导的几何结构和工作频率，它们描述了波包和能量传播的速率。</p>
+</li>
+</ol>
+<h2 id="Rechteckhohlleiter"><a href="#Rechteckhohlleiter" class="headerlink" title="Rechteckhohlleiter"></a>Rechteckhohlleiter</h2><ol>
+<li><p><strong>E-和H-波的含义及其在波导中解决麦克斯韦方程组中的区别</strong>：E-和H-波是电磁波的两种基本模式，它们在波导中的传播方式不同，对于解决波导中的麦克斯韦方程组至关重要。</p>
+</li>
+<li><p><strong>我们如何解析地求解纵向场分量的波动方程</strong>：我们可以通过将麦克斯韦方程组应用到波导的特定几何形状中，并利用适当的边界条件，解析地求解纵向场分量的波动方程。</p>
+</li>
+<li><p><strong>矩形波导中必须满足的边界条件，以及因此得到的E-和H-波的纵向场分量的解</strong>：在矩形波导中，必须满足适当的电场和磁场的边界条件，这导致了E-和H-波的纵向场分量的特定解。</p>
+</li>
+<li><p><strong>什么是模式以及在矩形波导中各个模式可以传播的条件</strong>：模式是描述波导中电磁场的特定空间分布形式。在矩形波导中，不同模式的传播受到几何尺寸和工作频率的限制。</p>
+</li>
+<li><p><strong>E-和H-波允许的模式数</strong>：E-和H-波在矩形波导中允许的模式由其几何结构和工作频率决定。</p>
+</li>
+<li><p><strong>矩形波导中模式的外观</strong>：不同模式的电磁场在矩形波导中会呈现出特定的空间分布形式，如横向和纵向的电场和磁场分布。</p>
+</li>
+<li><p><strong>边缘频率对矩形波导模式的影响</strong>：边缘频率是指波导中特定模式的传播频率的临界值，超过此频率将无法在波导中传播该模式。</p>
+</li>
+<li><p><strong>矩形波导中的相位速度和群速度的行为</strong>：在矩形波导中，相位速度和群速度取决于波导的几何结构和工作频率，它们描述了波包和能量传播的速率。</p>
+</li>
+</ol>
+<h2 id="Rundhohlleiter"><a href="#Rundhohlleiter" class="headerlink" title="Rundhohlleiter"></a>Rundhohlleiter</h2><ol>
+<li><p><strong>我们如何解析地求解圆形波导中纵向场分量的波动方程</strong>：我们可以采用分离变量法的方法，将麦克斯韦方程组应用于圆形波导的特定几何形状中，并应用适当的边界条件，来解析地求解纵向场分量的波动方程。</p>
+</li>
+<li><p><strong>Bessel方程和修正Bessel方程之间的关系</strong>：Bessel方程和修正Bessel方程是一类特殊的微分方程，它们描述了径向方向上的波动行为。修正Bessel方程是Bessel方程的变种，两者之间的关系是修正Bessel方程在原点处有一个额外的奇异解。</p>
+</li>
+<li><p><strong>Bessel方程和修正Bessel方程的解函数</strong>：Bessel方程和修正Bessel方程的解函数称为Bessel函数和修正Bessel函数，它们在物理学和工程中具有广泛的应用。</p>
+</li>
+<li><p><strong>圆形波导中必须满足的边界条件，以及因此得到的E-和H-波的纵向场分量的解</strong>：在圆形波导中，必须满足适当的电场和磁场的边界条件，这导致了E-和H-波的纵向场分量的特定解。</p>
+</li>
+<li><p><strong>圆形波导中的E-和H-模式的外观</strong>：不同模式的电磁场在圆形波导中会呈现出特定的空间分布形式，如径向和环向的电场和磁场分布。</p>
+</li>
+<li><p><strong>为什么相同模式数的E-和H-波的传播常数会有所不同</strong>：E-和H-波的传播常数取决于波导的几何结构和工作频率，因此即使是相同的模式数，它们的传播常数也可能不同。</p>
+</li>
+<li><p><strong>圆形波导中相位速度和群速度的行为</strong>：在圆形波导中，相位速度和群速度取决于波导的几何结构和工作频率，它们描述了波包和能量传播的速率。</p>
+</li>
+</ol>
+<h2 id="Dielektrischer-Schichtwellenleiter"><a href="#Dielektrischer-Schichtwellenleiter" class="headerlink" title="Dielektrischer Schichtwellenleiter"></a>Dielektrischer Schichtwellenleiter</h2><ol>
+<li><p><strong>介质层波导的波传播条件</strong>：介质层波导的波传播需要满足适当的边界条件，包括电磁场在介质层和周围介质之间的连续性以及电磁场在波导内部的传播模式。</p>
+</li>
+<li><p><strong>边界处的全反射对电磁波的影响</strong>：在介质层波导中，当电磁波入射角大于临界角时，发生全反射，导致波完全反射回波导内部，而不是透射到外部介质中。</p>
+</li>
+<li><p><strong>为何只有在与界面成离散角度的情况下才可能发生波传播</strong>：波只有在与介质层表面形成特定角度的情况下才能通过全反射进入波导，这些角度是离散的，这样波才能在介质层内部传播。</p>
+</li>
+<li><p><strong>如何图解解垂直和平行极化的特征值方程，并由此推导出可传播模式的数量</strong>：可以通过图解特征值方程来确定波导中可传播模式的数量，这些方程描述了波在波导中的传播条件。</p>
+</li>
+<li><p><strong>波导参数和可传播模式数量的关系</strong>：波导的几何形状、介质特性和工作频率等参数会影响波导中可传播模式的数量，不同的参数组合可能导致不同数量的可传播模式。</p>
+</li>
+<li><p><strong>平行极化下的传播常数通常小于垂直极化</strong>：在介质层波导中，通常情况下，平行极化模式的传播常数要小于垂直极化模式，这是由介质的特性和波的传播方式所决定的。</p>
+</li>
+<li><p><strong>介质界面处的电磁波行为</strong>：介质界面处的电磁波会发生反射、折射和透射等现象，这取决于介质的折射率、入射角度和波长等因素。</p>
+</li>
+<li><p><strong>如何求解介质层波导中的波动方程以及解的条件</strong>：我们可以通过将麦克斯韦方程组应用于介质层波导的特定几何形状中，并应用适当的边界条件来求解波动方程，解必须满足波导的几何和物理条件。</p>
+</li>
+<li><p><strong>折射率剖面对波导模式的场分布的影响</strong>：波导的折射率剖面会影响波导模式的场分布，不同的剖面会导致不同的波导模式形态。</p>
+</li>
+</ol>
+<h2 id="stufenindexfaser"><a href="#stufenindexfaser" class="headerlink" title="stufenindexfaser"></a>stufenindexfaser</h2><ol>
+<li><strong>什么是弱导波</strong>，以及相应条件对波的传播的意义。</li>
+<li><strong>线偏振波或模态</strong>是什么，以及与它们相关的近似。</li>
+<li><strong>阶梯折射率光纤的波传播是基于什么现象的</strong>。</li>
+<li><strong>我们在柱坐标系中解决Helmholtz方程的方法</strong>。</li>
+<li><strong>为什么以及如何简化弱导波条件下的连续性条件</strong>。</li>
+<li><strong>（简化的）连续性条件对解的影响</strong>。</li>
+<li><strong>我们是如何推导阶梯折射率光纤的特征值方程的</strong>。</li>
+<li><strong>我们如何通过图形方法确定阶梯折射率光纤中传播模的数量</strong>。</li>
+<li><strong>什么是退化模态</strong>，以及它们的特性。</li>
+<li><strong>决定传播模数量的参数，以及阶梯折射率光纤的折射率剖面对此的影响</strong>。</li>
+<li><strong>阶梯折射率光纤中的波传播与圆形波导的区别在哪些方面</strong>。</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/11/05/EMW00/">http://example.com/2023/11/05/EMW00/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/">数学物理基础</a><a class="post-meta__tags" href="/tags/%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E7%BB%84/">麦克斯韦方程组</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/07/EES3%E4%B8%80%E8%88%AC%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF/" title="EES3三相电路的数学处理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">EES3三相电路的数学处理</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/05/EMW01/" title="EMW01"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">EMW01</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/StUBenHe" target="_blank" title="Github"><i class="fab fa-github" style="color: #000000;"></i></a><a class="social-icon" href="mailto:ben.he1999@outlook.com" target="_blank" title="Email"><i class="fas fa-light fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.zhihu.com/people/he-tai-shou-77" target="_blank" title="Zhihu"><i class="fas fa-brands fa-zhihu" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Einfuhrung"><span class="toc-number">1.</span> <span class="toc-text">Einführung</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Wellengleichung"><span class="toc-number">2.</span> <span class="toc-text">Wellengleichung</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zeitharmonische-ebene-Wellen"><span class="toc-number">3.</span> <span class="toc-text">Zeitharmonische ebene Wellen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elektromagnetsche-Wellen-in-dispersiven-Medien"><span class="toc-number">4.</span> <span class="toc-text">Elektromagnetsche Wellen in dispersiven Medien</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hertzscher-Dipol"><span class="toc-number">5.</span> <span class="toc-text">Hertzscher Dipol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reflexion-und-Brechung"><span class="toc-number">6.</span> <span class="toc-text">Reflexion und Brechung</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Beugung-und-Interferenz"><span class="toc-number">7.</span> <span class="toc-text">Beugung und Interferenz</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gausscher-strahl"><span class="toc-number">8.</span> <span class="toc-text">Gaußscher strahl</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Optische-Systeme"><span class="toc-number">9.</span> <span class="toc-text">Optische Systeme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ParallelplattenLeitung"><span class="toc-number">10.</span> <span class="toc-text">ParallelplattenLeitung</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rechteckhohlleiter"><span class="toc-number">11.</span> <span class="toc-text">Rechteckhohlleiter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rundhohlleiter"><span class="toc-number">12.</span> <span class="toc-text">Rundhohlleiter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dielektrischer-Schichtwellenleiter"><span class="toc-number">13.</span> <span class="toc-text">Dielektrischer Schichtwellenleiter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stufenindexfaser"><span class="toc-number">14.</span> <span class="toc-text">stufenindexfaser</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/10/EES4Wanderwellen%E8%A1%8C%E6%B3%A2/" title="EES4Wanderwellen行波">EES4Wanderwellen行波</a><time datetime="2023-11-10T00:36:08.000Z" title="Created 2023-11-10 01:36:08">2023-11-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/07/EES3%E4%B8%80%E8%88%AC%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF/" title="EES3三相电路的数学处理">EES3三相电路的数学处理</a><time datetime="2023-11-06T23:55:25.000Z" title="Created 2023-11-07 00:55:25">2023-11-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/05/EMW00/" title="EMW01">EMW01</a><time datetime="2023-11-05T19:01:41.000Z" title="Created 2023-11-05 20:01:41">2023-11-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/05/EMW01/" title="EMW01">EMW01</a><time datetime="2023-11-05T19:01:41.000Z" title="Created 2023-11-05 20:01:41">2023-11-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/03/EES2%E4%B8%89%E7%9B%B8%E7%94%B5%E8%B7%AF/" title="EES2三相电路">EES2三相电路</a><time datetime="2023-11-03T21:55:07.000Z" title="Created 2023-11-03 22:55:07">2023-11-03</time></div></div></div></div></div></div></main><footer id="footer" style="background: rgb(0,0,0)"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">感谢来自www.pixabay.com 的tieracanler提供的背景图</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div></div></body></html>
